@@ -29,7 +29,6 @@ app.get('/', function (req, res) {
 });
 
 app.post('/api/fileanalyse', upload.single('upfile'), function (req, res) {
-  console.log(req)
   const file = req.file;
 
   if (!file) {
@@ -42,6 +41,7 @@ app.post('/api/fileanalyse', upload.single('upfile'), function (req, res) {
     size: file.size
   });
 });
+
 
 
 
